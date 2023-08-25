@@ -3,10 +3,9 @@ import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
     {
-        path: 'dashboard',
+        path: '',
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
     },
-    {path: '', redirectTo: 'dashboard', pathMatch:'full'},
 ];
 
 @NgModule({
