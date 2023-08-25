@@ -1,0 +1,43 @@
+@import "./src/variables";
+.dashboard-container {
+  background-image: url("../../../../assets/background.png");
+}
+.search-container {
+  animation: slideDown 1.5s ease-in-out;
+}
+.spinner {
+  animation: circle 1s linear infinite;
+}
+.text-product {
+  color: $product-blue-color;
+}
+
+.text-explain {
+  color: $base-gray-300;
+}
+
+
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-130%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg);
+
+  }
+  100%{
+    transform:rotate(360deg);
+  }
+}
+

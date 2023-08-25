@@ -1,0 +1,16 @@
+<div class="d-flex flex-column justify-content-center align-items-center my-auto min-vh-100 w-100 dashboard-container">
+    <div class="d-flex flex-column justify-content-center align-items-center search-container" *ngIf="!loadingData">
+        <div class="d-flex justify-content-center align-items-center mb-1">
+            <span class="text-xl text-white">Welcome to</span>
+            <span class="text-xl text-product mx-1">TypeWeather</span>
+        </div>
+        <span class="text-md text-explain mb-3">Choose a location to view the weather forecast</span>
+        <app-search (searchCityChange)="searchCity($event)" data-test="search-input"></app-search>
+    </div>
+    <app-weather-result class="w-100"
+                        *ngIf="hasResult && errorMessage == null && !loadingData"
+                        [weather]="weather"></app-weather-result>
+    <span class="text-md text-product mt-3"
+          *ngIf="!hasResult && errorMessage != null && !loadingData">{{errorMessage}}</span>
+    <app-icons icon="spinner" *ngIf="loadingData" class="spinner"></app-icons>
+</div>

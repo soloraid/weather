@@ -1,0 +1,13 @@
+<div class="d-flex flex-column justify-content-between border border-0 rounded-2 my-5 mx-auto weather" [style]="{ 'background-image': 'url('+ image+')'}" *ngIf="weather">
+    <div class="d-flex justify-content-between align-items-center px-4 pt-4">
+        <span class="heading-md text-white" data-test="county-region">{{weather.region}}, {{weather.country}}</span>
+        <span class="heading-md text-white" data-test="description-weather">{{weather.weather_descriptions[0]}}</span>
+    </div>
+    <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex flex-column justify-content-center ps-3">
+            <span class="heading-hd text-white" data-test="temperature">{{weather.temperature}}ºc</span>
+            <span class="heading-md text-white" data-test="humidity">humidity: {{weather.humidity}}</span>
+        </div>
+        <app-icons [icon]="weatherIcon"></app-icons>
+    </div>
+</div>

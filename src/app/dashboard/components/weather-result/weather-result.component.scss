@@ -1,0 +1,24 @@
+@import "./src/variables";
+
+.weather {
+  width: 100%;
+  max-width: 700px;
+  height: 450px;
+  animation: slideUp 1.4s ease-in;
+  @media (max-width: $sm) {
+    max-width: 450px;
+    height: 350px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(38%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,25 @@
+@import "./src/variables";
+
+.search-container {
+  position: relative;
+  width: max-content;
+
+  app-icons {
+    position: absolute;
+    right: 0.7rem;
+    top: 1rem;
+    cursor: pointer;
+  }
+}
+.input-search {
+  border: none;
+  border-radius: 8px;
+  width: 50vw;
+  height: 56px;
+  padding: 0 20px;
+  color: $base-gray-400;
+  background-color: $base-gray-600;
+  &:focus {
+    outline: none;
+  }
+}
