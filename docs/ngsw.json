@@ -1,0 +1,121 @@
+{
+  "configVersion": 1,
+  "timestamp": 1693017472458,
+  "index": "https://soloraid.github.io/weather/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://soloraid.github.io/weather/351.306c3f57b50b1c8e.js",
+        "https://soloraid.github.io/weather/favicon.ico",
+        "https://soloraid.github.io/weather/index.html",
+        "https://soloraid.github.io/weather/main.de1b71f09623130d.js",
+        "https://soloraid.github.io/weather/manifest.webmanifest",
+        "https://soloraid.github.io/weather/polyfills.1e9da581555ec19b.js",
+        "https://soloraid.github.io/weather/runtime.d0d6da3b3ea2b621.js",
+        "https://soloraid.github.io/weather/scripts.857da030347af49d.js",
+        "https://soloraid.github.io/weather/styles.bb2c338cca5b2a22.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://soloraid.github.io/weather/assets/background.png",
+        "https://soloraid.github.io/weather/assets/i18n/de.json",
+        "https://soloraid.github.io/weather/assets/i18n/en.json",
+        "https://soloraid.github.io/weather/assets/i18n/fr.json",
+        "https://soloraid.github.io/weather/assets/icons/icon-128x128.png",
+        "https://soloraid.github.io/weather/assets/icons/icon-144x144.png",
+        "https://soloraid.github.io/weather/assets/icons/icon-152x152.png",
+        "https://soloraid.github.io/weather/assets/icons/icon-192x192.png",
+        "https://soloraid.github.io/weather/assets/icons/icon-384x384.png",
+        "https://soloraid.github.io/weather/assets/icons/icon-512x512.png",
+        "https://soloraid.github.io/weather/assets/icons/icon-72x72.png",
+        "https://soloraid.github.io/weather/assets/icons/icon-96x96.png",
+        "https://soloraid.github.io/weather/assets/icons/logo.png",
+        "https://soloraid.github.io/weather/assets/weathers/weather-clear-moment-night.png",
+        "https://soloraid.github.io/weather/assets/weathers/weather-cloudy-moment-day.png",
+        "https://soloraid.github.io/weather/assets/weathers/weather-cloudy-moment-night.png",
+        "https://soloraid.github.io/weather/assets/weathers/weather-partly-cloudy-moment-day.png",
+        "https://soloraid.github.io/weather/assets/weathers/weather-partly-cloudy-moment-night.png",
+        "https://soloraid.github.io/weather/assets/weathers/weather-rain-moment-day.png",
+        "https://soloraid.github.io/weather/assets/weathers/weather-rain-moment-night.png",
+        "https://soloraid.github.io/weather/assets/weathers/weather-snow-moment-day.png",
+        "https://soloraid.github.io/weather/assets/weathers/weather-snow-moment-night.png",
+        "https://soloraid.github.io/weather/assets/weathers/weather-sunny-moment-day.png",
+        "https://soloraid.github.io/weather/assets/weathers/weather-thunderstorms-moment-day.png",
+        "https://soloraid.github.io/weather/assets/weathers/weather-thunderstorms-moment-night.png",
+        "https://soloraid.github.io/weather/background.7311126b6b7b9256.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://soloraid.github.io/weather/351.306c3f57b50b1c8e.js": "98807720496095f3591e5f3e91357fbc09f3dfd6",
+    "https://soloraid.github.io/weather/assets/background.png": "7162d32f9b6c511be331e56d0e881ffda00b4d57",
+    "https://soloraid.github.io/weather/assets/i18n/de.json": "e558a3429a447868d1e4f4993b6d289c43576995",
+    "https://soloraid.github.io/weather/assets/i18n/en.json": "3ef22352f86d25eab8a591a28863d2bd20a84d20",
+    "https://soloraid.github.io/weather/assets/i18n/fr.json": "d8f45001bec7b333d593bdf1b17daf45e2e70e40",
+    "https://soloraid.github.io/weather/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "https://soloraid.github.io/weather/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "https://soloraid.github.io/weather/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "https://soloraid.github.io/weather/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "https://soloraid.github.io/weather/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://soloraid.github.io/weather/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://soloraid.github.io/weather/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "https://soloraid.github.io/weather/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "https://soloraid.github.io/weather/assets/icons/logo.png": "d3c1e7c4ffc572646b114f9433193fbbb538a17f",
+    "https://soloraid.github.io/weather/assets/weathers/weather-clear-moment-night.png": "0fe639a9afd1698237d27026bbbd914dcefd792c",
+    "https://soloraid.github.io/weather/assets/weathers/weather-cloudy-moment-day.png": "218e1f0e18200a7e031542034d7d87057e61b2ff",
+    "https://soloraid.github.io/weather/assets/weathers/weather-cloudy-moment-night.png": "74798b2dd052485d5120c6f15a047040fd0a20cb",
+    "https://soloraid.github.io/weather/assets/weathers/weather-partly-cloudy-moment-day.png": "ffbddd25fc994ff13bcadd28a0f49c971be8abcd",
+    "https://soloraid.github.io/weather/assets/weathers/weather-partly-cloudy-moment-night.png": "d5e876e76241bbb49bca83a01a35a45f9e8d8ef9",
+    "https://soloraid.github.io/weather/assets/weathers/weather-rain-moment-day.png": "25a4aabb30d6a5564003117f3a17f3d9c0838345",
+    "https://soloraid.github.io/weather/assets/weathers/weather-rain-moment-night.png": "16b3f6a1073eb2ee7c72670c302c1474872c158d",
+    "https://soloraid.github.io/weather/assets/weathers/weather-snow-moment-day.png": "558fbd5f65eb64748a6e667fc1e9e72739882573",
+    "https://soloraid.github.io/weather/assets/weathers/weather-snow-moment-night.png": "3ab55064b38d4ff5f0f7273cc44bede399f4e4e1",
+    "https://soloraid.github.io/weather/assets/weathers/weather-sunny-moment-day.png": "cd8b4fad3020409450df0525e57bee5a3f78000f",
+    "https://soloraid.github.io/weather/assets/weathers/weather-thunderstorms-moment-day.png": "19391b8569d5537bd2574246b5d30cda69657570",
+    "https://soloraid.github.io/weather/assets/weathers/weather-thunderstorms-moment-night.png": "9454778f335db3417af3f7a8b08076e4937fb5e0",
+    "https://soloraid.github.io/weather/background.7311126b6b7b9256.png": "7162d32f9b6c511be331e56d0e881ffda00b4d57",
+    "https://soloraid.github.io/weather/favicon.ico": "0f6a9d553ca55185fd37d6c6a60e6b0b16aba8bb",
+    "https://soloraid.github.io/weather/index.html": "66de5fccd41249d0ca816888826eff3c2620d510",
+    "https://soloraid.github.io/weather/main.de1b71f09623130d.js": "6adfe38a48cf170d774bfaabb2f2d49d2f6552cd",
+    "https://soloraid.github.io/weather/manifest.webmanifest": "0eaa3f04f9603780261fd183b86b0598a54965fe",
+    "https://soloraid.github.io/weather/polyfills.1e9da581555ec19b.js": "7b70ca736203174c1ae2630c3b827c7504812009",
+    "https://soloraid.github.io/weather/runtime.d0d6da3b3ea2b621.js": "5acd58c2238d6088a2c06dd5aeb1069a9e0e8243",
+    "https://soloraid.github.io/weather/scripts.857da030347af49d.js": "fe401ef03af3cc9f7b370f6e06eb636d2cca3691",
+    "https://soloraid.github.io/weather/styles.bb2c338cca5b2a22.css": "d3507c06e130232f5e69ed61c5c9181a7ea55c62"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
