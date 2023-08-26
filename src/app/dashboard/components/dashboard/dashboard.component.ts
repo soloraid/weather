@@ -4,6 +4,7 @@ import {Store} from '@ngrx/store';
 import {Subscription} from 'rxjs';
 import * as WeatherActions from '../../store/weather.actions';
 import * as fromApp from '../../../store/app.reducer'
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,8 +16,20 @@ export class DashboardComponent implements OnInit, OnDestroy{
     loadingData = false;
     weather: Partial<Weather>;
     errorMessage: string;
+    currentLanguage = 'en';
     subscription: Subscription;
-    constructor(private store: Store<fromApp.AppState>) {
+    constructor(private store: Store<fromApp.AppState>, private translate: TranslateService) {
+        this.translate.setDefaultLang('en');
+    }
+
+    changeLanguage(): void {
+        if (this.currentLanguage == 'en') {
+            this.translate.use('de');
+            this.currentLanguage = 'de';
+        } else {
+            this.translate.use('en');
+            this.currentLanguage = 'en';
+        }
     }
     searchCity(cityName: string): void {
         this.loadingData = true;

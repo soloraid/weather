@@ -1,7 +1,7 @@
 import {NgModule, isDevMode} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {ServiceWorkerModule} from '@angular/service-worker';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 
@@ -9,6 +9,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import * as fromApp from './store/app.reducer'
 import {WeatherEffects} from './dashboard/store/weather.effects';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 @NgModule({
     declarations: [
@@ -31,4 +32,7 @@ import {WeatherEffects} from './dashboard/store/weather.effects';
     bootstrap: [AppComponent],
 })
 export class AppModule {
+}
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http);
 }
