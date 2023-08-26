@@ -26,7 +26,8 @@ import {HttpLoaderFactory} from '../app.module';
                 provide: TranslateLoader,
                 useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
-            }
+            },
+            defaultLanguage: 'en',
         }),
     ]
 })
