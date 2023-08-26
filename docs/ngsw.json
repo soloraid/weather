@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1693018774496,
+  "timestamp": 1693036729325,
   "index": "https://soloraid.github.io/weather/index.html",
   "assetGroups": [
     {
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "https://soloraid.github.io/weather/753.16cb6b1786d9eb7c.js",
+        "https://soloraid.github.io/weather/753.ed469c9b28ef281a.js",
         "https://soloraid.github.io/weather/favicon.ico",
         "https://soloraid.github.io/weather/index.html",
-        "https://soloraid.github.io/weather/main.d625a417e15b917a.js",
+        "https://soloraid.github.io/weather/main.082cf9b6e8995118.js",
         "https://soloraid.github.io/weather/manifest.webmanifest",
         "https://soloraid.github.io/weather/polyfills.f4573fa95ea7b57e.js",
-        "https://soloraid.github.io/weather/runtime.4a3950ab75ee66f6.js",
+        "https://soloraid.github.io/weather/runtime.1920eb86bb558f6a.js",
         "https://soloraid.github.io/weather/scripts.1724b68defac445f.js",
         "https://soloraid.github.io/weather/styles.bb2c338cca5b2a22.css"
       ],
@@ -63,7 +63,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "https://soloraid.github.io/weather/753.16cb6b1786d9eb7c.js": "83d0e9c230e272374835663af0d45e9ac840498d",
+    "https://soloraid.github.io/weather/753.ed469c9b28ef281a.js": "2355f540f351bc703b228117c28bed7491dfe069",
     "https://soloraid.github.io/weather/assets/background.png": "7162d32f9b6c511be331e56d0e881ffda00b4d57",
     "https://soloraid.github.io/weather/assets/i18n/de.json": "e558a3429a447868d1e4f4993b6d289c43576995",
     "https://soloraid.github.io/weather/assets/i18n/en.json": "3ef22352f86d25eab8a591a28863d2bd20a84d20",
@@ -91,11 +91,11 @@
     "https://soloraid.github.io/weather/assets/weathers/weather-thunderstorms-moment-night.png": "9454778f335db3417af3f7a8b08076e4937fb5e0",
     "https://soloraid.github.io/weather/background.7311126b6b7b9256.png": "7162d32f9b6c511be331e56d0e881ffda00b4d57",
     "https://soloraid.github.io/weather/favicon.ico": "0f6a9d553ca55185fd37d6c6a60e6b0b16aba8bb",
-    "https://soloraid.github.io/weather/index.html": "c2e4ce6f64635aab8ae199ebe796d8f5c6e4cbaa",
-    "https://soloraid.github.io/weather/main.d625a417e15b917a.js": "4e728a8a2b7ea79f6d86f856eaa8df7614332681",
+    "https://soloraid.github.io/weather/index.html": "86b2b62f2161df6fce8f2895189e72313dad740a",
+    "https://soloraid.github.io/weather/main.082cf9b6e8995118.js": "f043eaa3a56b7a5673b387e43e92092b9d5daf8e",
     "https://soloraid.github.io/weather/manifest.webmanifest": "0eaa3f04f9603780261fd183b86b0598a54965fe",
     "https://soloraid.github.io/weather/polyfills.f4573fa95ea7b57e.js": "fadb7688980e561845f8f262a94600dc405cc0d1",
-    "https://soloraid.github.io/weather/runtime.4a3950ab75ee66f6.js": "16b9ac42a1ac846e2481d24f4a3e6d8f78a13932",
+    "https://soloraid.github.io/weather/runtime.1920eb86bb558f6a.js": "9f2af2655e16a5360f702dff03cf8c98771a4cd1",
     "https://soloraid.github.io/weather/scripts.1724b68defac445f.js": "2dd816926666afc0bf9421e1670f5fde53007f2f",
     "https://soloraid.github.io/weather/styles.bb2c338cca5b2a22.css": "d3507c06e130232f5e69ed61c5c9181a7ea55c62"
   },
