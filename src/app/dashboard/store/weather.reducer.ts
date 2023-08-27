@@ -1,6 +1,10 @@
-import * as WeatherActions from './weather.actions';
-import {weatherActions} from './weather.actions';
 import {Weather} from '../models/weather..model';
+import {createReducer, on} from '@ngrx/store';
+import {
+    searchCurrentWeather,
+    searchCurrentWeatherFail,
+    updateCurrentWeather
+} from './weather.actions';
 
 const initialState: State = {
     currentWeather: null,
@@ -16,32 +20,26 @@ export interface State {
     loading: boolean;
 }
 
-export function weatherReducer(state: State = initialState, action: weatherActions): State {
 
-    switch (action.type) {
-        case WeatherActions.updateCurrentWeather:
-            return {
-                ...state,
-                currentWeather: action.payload.currentWeather,
-                cityName:  action.payload.cityName,
-                errorMessage: null,
-                loading: false,
-            };
-        case WeatherActions.searchCurrentWeather:
-            return  {
-                ...state,
-                loading: true,
-                errorMessage: null,
-            };
-        case WeatherActions.searchCurrentWeatherFail:
-            return {
-                ...state,
-                currentWeather: null,
-                cityName: null,
-                errorMessage: action.payload,
-                loading: false,
-            };
-        default:
-            return state;
-    }
-}
+export const weatherReducer = createReducer(
+    initialState,
+    on(updateCurrentWeather, (state, payload: { currentWeather: Partial<Weather>, cityName: string }) => ({
+        ...state,
+        currentWeather: payload.currentWeather,
+        cityName: payload.cityName,
+        errorMessage: null,
+        loading: false,
+    })),
+    on(searchCurrentWeather, (state) => ({
+        ...state,
+        loading: true,
+        errorMessage: null,
+    })),
+    on(searchCurrentWeatherFail, (state, payload: { error: string }) => ({
+        ...state,
+        currentWeather: null,
+        cityName: null,
+        errorMessage: payload.error,
+        loading: false,
+    })),
+)

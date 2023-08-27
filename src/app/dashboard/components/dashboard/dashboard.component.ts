@@ -2,9 +2,9 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Weather} from '../../models/weather..model';
 import {Store} from '@ngrx/store';
 import {Subscription} from 'rxjs';
-import * as WeatherActions from '../../store/weather.actions';
 import * as fromApp from '../../../store/app.reducer'
 import {TranslateService} from '@ngx-translate/core';
+import {cacheCurrentWeather, searchCurrentWeather} from '../../store/weather.actions';
 
 @Component({
   selector: 'app-dashboard',
@@ -33,11 +33,11 @@ export class DashboardComponent implements OnInit, OnDestroy{
     }
     searchCity(cityName: string): void {
         this.loadingData = true;
-        this.store.dispatch(new WeatherActions.SearchCurrentWeather(cityName));
+        this.store.dispatch(searchCurrentWeather({cityName}));
     }
 
     ngOnInit(): void {
-        this.store.dispatch(new WeatherActions.CacheCurrentWeather());
+        this.store.dispatch(cacheCurrentWeather());
         this.subscription = this.store.select('dashboardWeather').subscribe(data => {
             this.weather = data.currentWeather;
             this.hasResult = data.currentWeather != null;

@@ -1,18 +1,23 @@
 import {Injectable} from '@angular/core';
 import {Actions, createEffect, ofType} from '@ngrx/effects';
 import {catchError, map, switchMap} from 'rxjs/operators';
-import * as WeatherActions from './weather.actions'
 import {WeatherApi} from '../../services/weather.api';
 import {Weather} from '../models/weather..model';
 import {of} from 'rxjs';
+import {
+    cacheCurrentWeather,
+    searchCurrentWeather,
+    searchCurrentWeatherFail,
+    updateCurrentWeather
+} from './weather.actions';
 
 @Injectable()
 export class WeatherEffects {
     searchCurrentWeather$ = createEffect(() =>
         this.actions$.pipe(
-            ofType(WeatherActions.searchCurrentWeather),
-            switchMap((data: WeatherActions.SearchCurrentWeather) => {
-                return this.weatherApi.getCurrentWeatherOfCity(data.payload).pipe(
+            ofType(searchCurrentWeather),
+            switchMap(data => {
+                return this.weatherApi.getCurrentWeatherOfCity(data.cityName).pipe(
                     map(resData => {
                         if (!resData.error) {
                             const currentWeather: Partial<Weather> = {
@@ -24,17 +29,14 @@ export class WeatherEffects {
                                 temperature: resData.current.temperature,
                                 is_day: resData.current.is_day !== 'no'
                             }
-                            this.updateCacheWeatherCity(currentWeather, data.payload);
-                            return new WeatherActions.UpdateCurrentWeather({
-                                currentWeather,
-                                cityName: data.payload
-                            });
+                            this.updateCacheWeatherCity(currentWeather, data.cityName);
+                            return updateCurrentWeather({currentWeather, cityName: data.cityName});
                         } else {
                             localStorage.clear();
-                            return new WeatherActions.SearchCurrentWeatherFail(resData.error.info);
+                            return searchCurrentWeatherFail({error: resData.error.info});
                         }
                     }),
-                    catchError(err => of(new WeatherActions.SearchCurrentWeatherFail(err.error.info))),
+                    catchError(err => of(searchCurrentWeatherFail({error: err.error.info}))),
                 );
             }),
         )
@@ -42,14 +44,14 @@ export class WeatherEffects {
 
     cacheCurrentWeather$ = createEffect(() =>
         this.actions$.pipe(
-            ofType(WeatherActions.cacheCurrentWeather),
-            switchMap((data: WeatherActions.CacheCurrentWeather) => {
+            ofType(cacheCurrentWeather),
+            switchMap( () => {
                 const state = this.getLastSearchWeatherCity();
                 if (state != null) {
-                    return of(new WeatherActions.UpdateCurrentWeather(state));
+                    return of(updateCurrentWeather({currentWeather: state.currentWeather, cityName: state.cityName}));
                 }
                 return of();
-            })
+            }),
         ));
 
 

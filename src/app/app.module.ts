@@ -7,9 +7,9 @@ import {EffectsModule} from '@ngrx/effects';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import * as fromApp from './store/app.reducer'
 import {WeatherEffects} from './dashboard/store/weather.effects';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {weatherReducer} from './dashboard/store/weather.reducer';
 
 @NgModule({
     declarations: [
@@ -25,7 +25,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
             // or after 30 seconds (whichever comes first).
             registrationStrategy: 'registerWhenStable:10000'
         }),
-        StoreModule.forRoot(fromApp.appReducer),
+        StoreModule.forRoot({dashboardWeather: weatherReducer}),
         EffectsModule.forRoot([WeatherEffects]),
     ],
     providers: [],
